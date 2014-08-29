@@ -331,6 +331,6 @@ The next time you need to tie in a Rails app to your RhoMobile application take 
 
 ## About Us
 
-Facing challenges with your RhoMobile implementation? Kutir Technologies, a Motorola Certified partner, can help you get your app done on time. Get in touch with us today at info@kutirtech.com , no strings attached.
+Facing challenges with your RhoMobile implementation? Kutir Mobility, a Motorola Certified partner, can help you get your app done on time. Get in touch with us today at info@kutirtech.com , no strings attached.
 
 This is a cross-post from Motorola's Launchpad Blog: https://developer.motorolasolutions.com/community/rhomobile-suite/rhomobile-community/rhomobile-blogs/blog/2014/08/29/rhoconnect-plugins-in-ruby
