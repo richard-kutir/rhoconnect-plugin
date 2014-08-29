@@ -1,0 +1,36 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @address.name %></h1>
+    <a href="<%= url_for :action => :show, :id => @address.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @address.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @address.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="address[name]" class="fieldLabel">Name</label>
+            <input type="text" id="address[name]" name="address[name]" value="<%= @address.name %>" <%= placeholder( "Name" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="address[email]" class="fieldLabel">Email</label>
+            <input type="text" id="address[email]" name="address[email]" value="<%= @address.email %>" <%= placeholder( "Email" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="address[address]" class="fieldLabel">Address</label>
+            <input type="text" id="address[address]" name="address[address]" value="<%= @address.address %>" <%= placeholder( "Address" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

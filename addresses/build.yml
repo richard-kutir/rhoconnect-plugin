@@ -1,0 +1,24 @@
+#sdk: "/Users/chronosafe/.rvm/gems/ruby-1.9.3-p545@rho/gems/rhodes-4.0.7"
+sdkversion: 4.0.0
+name: storemanager
+version: 1.0
+vendor: rhomobile
+build: debug
+bbver: 6.0
+applog: rholog.txt
+iphone:
+  configuration: Release
+  sdk: iphonesimulator7.0
+  provisionprofile:
+  codesignidentity:
+  entitlements:
+  BundleIdentifier: com.rhomobile.storemanager
+  BundleURLScheme: storemanager
+wp:
+  productid: '6228e230-107a-0132-f75e-38f6b11557a9'
+symbian:
+  uid: '0xe9b87e1a'
+android:
+  version: 2.3.3
+
+extensions: ["rhoconnect-client"]
