@@ -84,7 +84,7 @@ cd address_server
 
 In the `settings/settings.yml` add the `:sources:` section and add the `adapter_url` line to the development section: 
 
-```
+```yml
 :development:
   :licensefile: settings/license.key
   :redis: localhost:6379
@@ -145,7 +145,7 @@ This will create our database for us.
 
 Next we need to add an initializer to the `config/initializers` directory.  This will allow us to configure our communication with RhoConnect.  Create a file in `config/initializers` named `rhoconnect.rb` and add the following:
 
-```
+```ruby
 Rhoconnectrb.configure do |config|
   config.uri    = "http://localhost:9292"
   config.token  = "my-rhoconnect-token"
@@ -163,7 +163,7 @@ Notice the `config.token` line.  This token matches the token we created in our 
 
 Next we need to make some changes to the `app/models/address.rb` file to add the support for RhoConnect:
 
-```
+```ruby
 class Address < ActiveRecord::Base
 	include Rhoconnectrb::Resource
 
@@ -206,7 +206,7 @@ Be sure not to add spaces between the fields.  This will create the files we nee
 
 Edit the `app/Address/address.rb` to enable sync:
 
-```
+```ruby
 # The model has already been created by the framework, and extends Rhom::RhomObject
 # You can add more methods here
 class Address
@@ -261,7 +261,7 @@ rails server
 
 If using the iPhone simulator you'll need to update the version in the sdk in the `build.yml` file (it defaults to iOS 6):
 
-```
+```yml
 iphone:
   configuration: Release
   sdk: iphonesimulator7.0
